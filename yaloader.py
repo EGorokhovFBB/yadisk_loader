@@ -34,7 +34,7 @@ def download_files(url):
     with open(final_link, 'wb') as ff:
         ff.write(download_url.content)
     
-    print("downloaded", filename)
+    print("downloaded timetable")
     
     return final_link
 
