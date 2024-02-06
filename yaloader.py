@@ -25,12 +25,12 @@ def download_files(url):
     if not os.path.exists(destination_folder):
         os.makedirs(destination_folder)
 
-    start_filename = url.find('filename=')
-    end_filename = url[start_filename:].find('&')
-    end_name = start_filename + end_filename
-    filename = url[start_filename:end_name][9:]
+    # start_filename = url.find('filename=')
+    # end_filename = url[start_filename:].find('&')
+    # end_name = start_filename + end_filename
+    # filename = url[start_filename:end_name][9:]
     download_url = requests.get(url)
-    final_link = os.path.join(destination_folder, filename)
+    final_link = os.path.join(destination_folder, 'timetable.xlsx')
     with open(final_link, 'wb') as ff:
         ff.write(download_url.content)
     
